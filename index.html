@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Empleados</title>
+	<link rel="stylesheet" type="text/css" href="css/mdb.min.css">
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	  rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	  rel="stylesheet"
+	/>
+	<!-- MDB -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+	  rel="stylesheet"
+	/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+</head>
+
+
+<body>
+  <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="img/inicio.png"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Datos Personales</h3>
+
+            <form class="px-md-2">
+
+                      <div class="col-md-12">
+                        <label for="validationDefault01" class="form-label">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Ingrese sus nombre" class="form-control border-dark" id="nombre" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="validationDefault02" class="form-label">Apellido</label>
+                        <input type="text" name="apellido" placeholder="Ingrese sus apellido" class="form-control border-dark" id="apellido" required>
+                      </div>
+                          <div class="col-md-12">
+                            <label for="validationDefault05" class="form-label">Sexo</label>
+                            <input type="phone" name="sexo" placeholder="Ingrese su sexo" class="form-control border-dark" id="validationDefault05" required>
+                          </div>
+                          <br>
+                           <div class="col-md-12">
+                            <label for="validationDefault05" class="form-label">Fecha Nacimiento</label>
+                            <input type="date" name="nac" placeholder="Ingrese su fecha de ingreso" class="form-control border-dark" id="fec1">
+                          </div>
+                          <br>
+                          <div class="col-md-12">
+                            <label for="validationDefault05" class="form-label">Fecha de Ingreso</label>
+                            <input type="date" name="ing" placeholder="Ingrese su fecha de ingreso" class="form-control border-dark" id="fect2" required>
+                          </div>
+
+            </div>
+              <div class="card bg-transparent border-white" style="width: 34rem;">
+                  <div class="card-body">
+                        <form class="row g-3" name="modificar estudiante" method="POST" action="php/ModificarEstudiante.php">
+                          <div>
+                             <div>
+                              <p> 
+                                    <h4 id="scrollspyHeading44" align="center"><b><i>Salario</i></b></h4>
+                              </p> 
+                          </div>
+                      <div class="col-md-12" align="center">
+                        <input type="number" name="salario" placeholder="Ingrese Salario" class="form.control" id="sal" required>
+                        <button class="btn btn-primary" type="button" onclick="modificar_sala()">Modificar</button>
+                      </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <div class="card bg-transparent border-white" style="width: 34rem;">
+                <div class="card-body">
+                          <div>
+                            <div>
+                              <p> 
+                                    <h4 id="scrollspyHeading44" align="center"><b><i>Calculos</i></b></h4>
+                              </p> 
+                            </div>
+                          </div>
+                      <div class="col-md-12">
+                        <div class="d-grid gap-2 d-md-block" align="center">
+                            <input type="number" name="edad" placeholder="Calcular Edad" class="form-control" id="edact" required><br>
+                            <button class="btn btn-primary" type="button" onclick="edad_mod()">Calcular Edad</button>
+                        </div>
+                      </div><br><br>
+                       <div class="col-md-12">
+                        <div class="d-grid gap-2 d-md-block" align="center">
+                            <input type="number" name="ant" placeholder="calcular antiguedad" class="form-control  border-dark" id="edact2" required><br>
+
+                            <button class="btn btn-primary" type="button" onclick="ant_mod()">Calcular Antiguedad</button>
+                        </div>
+                      </div><br><br>
+                      <div class="col-md-12">
+                        <div class="d-grid gap-2 d-md-block" align="center">
+                            <input type="number" name="prest" placeholder="calcular prestaciones" class="form-control border-dark" id="calpresta" required><br>
+
+                            <button class="btn btn-primary" type="button" onclick="cal_prest()">Calcular Prestaciones</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+
+                <div class="card bg-transparent border-white" style="width: 34rem;">
+                  <div class="card-body">
+                          <div>
+                            <div>
+                              <p> 
+                                    <h4 id="scrollspyHeading44" align="center"><b><i>Puntos de extencion</i></b></h4>
+                              </p> 
+                            </div>
+                          </div>
+                      <div class="col-md-12">
+                        <div class="d-grid gap-2 d-md-block" align="center">
+                             <input type="number" name="ant" placeholder="calcular censantia" class="form-control  border-dark" id="cesa1" required><br>
+                             <button class="btn btn-primary" type="button" onclick="cal_cesa()">Calcular Cesantias</button>
+                        </div>
+                      </div><br>
+                      <div class="col-md-12">
+                        <div align="center">
+                          <input type="number" name="ant" placeholder="calcular interes cesantia" class="form-control  border-dark" id="cesa2" required><br>
+                          <button class="btn btn-primary" type="button" onclick="in_calcesa()">Interes Cesantia Anual</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-------------------------------------------- MDB -------------------------------------------------------->  
+<script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>
